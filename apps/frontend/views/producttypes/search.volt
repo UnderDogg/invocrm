@@ -11,7 +11,7 @@
     </li>
 </ul>
 
-<table class="table table-bordered table-striped" align="center">
+<table class="table table-bordered table-striped table-hover" align="center">
     <thead>
         <tr>
             <th>Id</th>

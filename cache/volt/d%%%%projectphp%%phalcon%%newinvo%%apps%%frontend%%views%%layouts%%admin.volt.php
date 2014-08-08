@@ -261,7 +261,7 @@
                                         <a href="#" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="<?php echo $this->url->get('session/end'); ?>" class="btn btn-default btn-flat">Sign out</a>
                                     </div>
                                 </li>
                             </ul>
@@ -297,9 +297,13 @@
                     </form>
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
-                    <?php echo $this->elements->getMenu(); ?>
                     <ul class="sidebar-menu">
                         <li class="active">
+                            <a href="<?php echo $this->url->get('index'); ?>">                                
+                                <i class="fa fa-dashboard"></i> <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="index.html">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>

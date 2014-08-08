@@ -2,7 +2,7 @@
     <h2>Your Invoices</h2>
 </p>
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-hover">
     <thead>
         <tr>
             <td>Number</td>

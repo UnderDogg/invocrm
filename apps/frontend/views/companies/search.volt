@@ -11,7 +11,7 @@
 
 {% for company in page.items %}
 {% if loop.first %}
-<table class="table table-bordered table-striped" align="center">
+<table class="table table-bordered table-striped table-hover" align="center">
     <thead>
         <tr>
             <th>Id</th>
@@ -19,6 +19,8 @@
             <th>Telephone</th>
             <th>Address</th>
             <th>City</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
 {% endif %}

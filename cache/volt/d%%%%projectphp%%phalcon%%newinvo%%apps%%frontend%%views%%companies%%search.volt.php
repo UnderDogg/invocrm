@@ -11,7 +11,7 @@
 
 <?php $v1152277401iterated = false; ?><?php $v1152277401iterator = $page->items; $v1152277401incr = 0; $v1152277401loop = new stdClass(); $v1152277401loop->length = count($v1152277401iterator); $v1152277401loop->index = 1; $v1152277401loop->index0 = 1; $v1152277401loop->revindex = $v1152277401loop->length; $v1152277401loop->revindex0 = $v1152277401loop->length - 1; ?><?php foreach ($v1152277401iterator as $company) { ?><?php $v1152277401loop->first = ($v1152277401incr == 0); $v1152277401loop->index = $v1152277401incr + 1; $v1152277401loop->index0 = $v1152277401incr; $v1152277401loop->revindex = $v1152277401loop->length - $v1152277401incr; $v1152277401loop->revindex0 = $v1152277401loop->length - ($v1152277401incr + 1); $v1152277401loop->last = ($v1152277401incr == ($v1152277401loop->length - 1)); ?><?php $v1152277401iterated = true; ?>
 <?php if ($v1152277401loop->first) { ?>
-<table class="table table-bordered table-striped" align="center">
+<table class="table table-bordered table-striped table-hover" align="center">
     <thead>
         <tr>
             <th>Id</th>
@@ -19,6 +19,8 @@
             <th>Telephone</th>
             <th>Address</th>
             <th>City</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
 <?php } ?>

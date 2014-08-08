@@ -1,6 +1,4 @@
-
-<form method="post" action="{{ url("companies/create") }}">
-
+{{ content() }}
 <ul class="pager">
     <li class="previous pull-left">
         {{ link_to("companies", "&larr; Go Back") }}
@@ -10,30 +8,37 @@
     </li>
 </ul>
 
-{{ content() }}
+<div class="box box-primary">
+<div class="box-header">
+    <h3 class="box-title">Create companies</h3>
+</div><!-- /.box-header -->
+<form role="form" method="post" action="{{ url("companies/create") }}">
+    <div class="box-body">
 
-<div class="center scaffold">
-    <h2>Create companies</h2>
+        <div class="form-group">
+            <label for="name">Name</label>
+            {{ form.render("name") }}
+        </div>
 
-    <div class="clearfix">
-        <label for="name">Name</label>
-        {{ form.render("name") }}
+        <div class="form-group">
+            <label for="telephone">Telephone</label>
+            {{ form.render("telephone") }}
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            {{ form.render("address") }}
+        </div>
+
+        <div class="form-group">
+            <label for="city">City</label>
+            {{ form.render("city") }}
+        </div>
+
+    </div><!-- /.box-body -->
+
+    <div class="box-footer">
+        {{ submit_button("Save", "class": "btn btn-success") }}
     </div>
-
-    <div class="clearfix">
-        <label for="telephone">Telephone</label>
-        {{ form.render("telephone") }}
-    </div>
-
-    <div class="clearfix">
-        <label for="address">Address</label>
-        {{ form.render("address") }}
-    </div>
-
-    <div class="clearfix">
-        <label for="city">City</label>
-        {{ form.render("city") }}
-    </div>
-
-</div>
 </form>
+</div>

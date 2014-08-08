@@ -23,6 +23,7 @@ class CompaniesController extends ControllerBase
 			$form->add(new Text("id", array(
 				"size" => 10,
 				"maxlength" => 10,
+				"class" => "form-control",
 			)));
 		} else {
 			$form->add(new Hidden("id"));
@@ -30,22 +31,26 @@ class CompaniesController extends ControllerBase
 
 		$form->add(new Text("name", array(
 			"size" => 24,
-			"maxlength" => 70
+			"maxlength" => 70,
+			"class" => "form-control",
 		)));
 
 		$form->add(new Text("telephone", array(
 			"size" => 10,
-			"maxlength" => 30
+			"maxlength" => 30,
+			"class" => "form-control",
 		)));
 
 		$form->add(new Text("address", array(
 			"size" => 14,
-			"maxlength" => 40
+			"maxlength" => 40,
+			"class" => "form-control",
 		)));
 
 		$form->add(new Text("city", array(
 			"size" => 14,
-			"maxlength" => 40
+			"maxlength" => 40,
+			"class" => "form-control",
 		)));
 
 		return $form;
