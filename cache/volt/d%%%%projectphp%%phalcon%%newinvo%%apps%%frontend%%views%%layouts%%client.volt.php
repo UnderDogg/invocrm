@@ -122,7 +122,7 @@
     </section>
 
     <!-- jQuery 2.0.2 -->
-    <?php echo $this->tag->javascriptInclude('js/jquery.min.js'); ?>
+    <?php echo $this->tag->javascriptInclude('plugins/jquery/dist/jquery.min.js'); ?>
     <?php echo $this->tag->javascriptInclude('plugins/eve/js/bootstrap.min.js'); ?>
     <?php echo $this->tag->javascriptInclude('plugins/eve/js/jquery.easing.1.3.js'); ?>
     <?php echo $this->tag->javascriptInclude('plugins/eve/js/retina-1.1.0.min.js'); ?>

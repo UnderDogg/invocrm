@@ -20,12 +20,21 @@
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
+        <![endif]-->        
+
+        <!-- jQuery 2.0.2 -->
+        {{ javascript_include('plugins/jquery/dist/jquery.min.js') }}
+        <!-- jQuery UI 1.10.3 -->
+        {{ javascript_include('plugins/admin-lte/js/jquery-ui-1.10.3.min.js') }}
+        <!-- Bootstrap -->
+        {{ javascript_include('plugins/admin-lte/js/bootstrap.min.js') }}
+        <!-- AdminLTE App -->
+        {{ javascript_include('plugins/admin-lte/js/AdminLTE/app.js') }}
     </head>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="index.html" class="logo">
+            <a href="{{ url("index") }}" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 VSCMS
             </a>
@@ -232,14 +241,14 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span>Jane Doe <i class="caret"></i></span>
+                                <span>Leo Nguyen <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
                                     {{ image("img/avatar3.png", "class": "img-circle", "alt": "User Image") }}
                                     <p>
-                                        Jane Doe - Web Developer
+                                        Leo Nguyen - Web Developer
                                         <small>Member since Nov. 2012</small>
                                     </p>
                                 </li>
@@ -298,11 +307,6 @@
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="active">
-                            <a href="{{ url("index") }}">                                
-                                <i class="fa fa-dashboard"></i> <span>Home</span>
-                            </a>
-                        </li>
                         <li>
                             <a href="index.html">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -412,15 +416,5 @@
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
-
-
-        <!-- jQuery 2.0.2 -->
-        {{ javascript_include('js/jquery.min.js') }}
-        <!-- jQuery UI 1.10.3 -->
-        {{ javascript_include('plugins/admin-lte/js/jquery-ui-1.10.3.min.js') }}
-        <!-- Bootstrap -->
-        {{ javascript_include('plugins/admin-lte/js/bootstrap.min.js') }}
-        <!-- AdminLTE App -->
-        {{ javascript_include('plugins/admin-lte/js/AdminLTE/app.js') }}
     </body>
 </html>

@@ -122,7 +122,7 @@
     </section>
 
     <!-- jQuery 2.0.2 -->
-    {{ javascript_include('js/jquery.min.js') }}
+    {{ javascript_include('plugins/jquery/dist/jquery.min.js') }}
     {{ javascript_include('plugins/eve/js/bootstrap.min.js') }}
     {{ javascript_include('plugins/eve/js/jquery.easing.1.3.js') }}
     {{ javascript_include('plugins/eve/js/retina-1.1.0.min.js') }}

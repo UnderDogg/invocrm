@@ -1,6 +1,4 @@
 
 <?php echo $this->elements->getTabs(); ?>
 
-<div align="center">
-    <?php echo $this->getContent(); ?>
-</div>
+<?php echo $this->getContent(); ?>
