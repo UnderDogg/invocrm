@@ -8,7 +8,7 @@ class InvoicesController extends ControllerBase
 {
     public function initialize()
     {
-        $this->view->setTemplateAfter('main');
+        $this->view->setTemplateAfter('admin');
         Tag::setTitle('Manage your Invoices');
         parent::initialize();
     }

@@ -81,10 +81,10 @@ class Elements extends Phalcon\Mvc\User\Component
             unset($this->_headerMenu['pull-left']['invoices']);
         }
 
-        echo '<div class="nav-collapse">';
+        echo '<div class="navbar-collapse collapse">';
         $controllerName = $this->view->getControllerName();
         foreach ($this->_headerMenu as $position => $menu) {
-            echo '<ul class="nav ', $position, '">';
+            echo '<ul class="nav navbar-nav ', $position, '">';
             foreach ($menu as $controller => $option) {
                 if ($controllerName == $controller) {
                     echo '<li class="active">';

@@ -6,7 +6,7 @@ class SessionController extends ControllerBase
 {
     public function initialize()
     {
-        $this->view->setTemplateAfter('main');
+        $this->view->setTemplateAfter('client');
         Tag::setTitle('Sign Up/Sign In');
         parent::initialize();
     }

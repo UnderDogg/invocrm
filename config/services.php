@@ -22,7 +22,12 @@ $di['router'] = function () {
     $router = new Router();
 
     $router->setDefaultModule("frontend");
-    $router->setDefaultNamespace("NewINVO\Frontend\Controllers");
+
+    $router->add("/invoices/:action", array(
+        'module' => 'backend',
+        'controller' => 'invoices',
+        'action' => 1,
+    ));
 
     return $router;
 };
@@ -40,9 +45,26 @@ $di['url'] = function () {
 /**
  * Start the session the first time some component request the session service
  */
-$di['session'] = function () {
-    $session = new SessionAdapter();
+$di->set('session', function(){
+    $session = new Phalcon\Session\Adapter\Files();
     $session->start();
-
     return $session;
-};
+});
+
+/**
+ * Register the flash service with custom CSS classes
+ */
+$di->set('flash', function(){
+    return new Phalcon\Flash\Direct(array(
+        'error' => 'alert alert-error',
+        'success' => 'alert alert-success',
+        'notice' => 'alert alert-info',
+    ));
+});
+
+/**
+ * Register a user component
+ */
+$di->set('elements', function(){
+    return new Elements();
+});
