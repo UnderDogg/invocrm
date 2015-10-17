@@ -7,7 +7,7 @@ try {
 	/**
 	 * Read the configuration
 	 */
-	$config = new Phalcon\Config\Adapter\Ini(__DIR__ . '/../apps/frontend/config/config.ini');
+	$config = require_once ('/../apps/frontend/config/config.php');
 
 	$loader = new \Phalcon\Loader();
 
@@ -16,12 +16,19 @@ try {
 	 */
 	$loader->registerDirs(
 		array(
-			__DIR__ . $config->application->controllersDir,
-			__DIR__ . $config->application->pluginsDir,
-			__DIR__ . $config->application->libraryDir,
-			__DIR__ . $config->application->modelsDir,
+			$config->application->controllersDir,
+			$config->application->modelsDir,
+      $config->application->pluginsDir,
+      $config->application->libraryDir,
+
 		)
 	)->register();
+
+/*
+			__DIR__ . $config->application->pluginsDir,
+			__DIR__ . $config->application->libraryDir,
+ **/
+
 
 	/**
 	 * The FactoryDefault Dependency Injector automatically register the right services providing a full stack framework
@@ -93,7 +100,7 @@ try {
 			"host" => $config->database->host,
 			"username" => $config->database->username,
 			"password" => $config->database->password,
-			"dbname" => $config->database->name
+			"dbname" => $config->database->dbname
 		));
 	});
 
