@@ -12,23 +12,25 @@ class ProductTypesController extends ControllerBase
         parent::initialize();
     }
 
-    public function indexAction()
+    public function oldindexAction()
     {
         $this->session->conditions = null;
     }
 
-    public function searchAction()
+    public function indexAction()
     {
         $numberPage = 1;
-        if ($this->request->isPost()) {
+        /*
+          *if ($this->request->isPost()) {
             $query = Criteria::fromInput($this->di, "ProductTypes", $_POST);
             $this->persistent->searchParams = $query->getParams();
         } else {
-            $numberPage = $this->request->getQuery("page", "int");
-            if ($numberPage <= 0) {
-                $numberPage = 1;
-            }
-        }
+        }*/
+
+      $numberPage = $this->request->getQuery("page", "int");
+      if ($numberPage <= 0) {
+        $numberPage = 1;
+      }
 
         $parameters = array();
         if ($this->persistent->searchParams) {

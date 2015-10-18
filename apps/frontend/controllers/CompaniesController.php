@@ -56,24 +56,29 @@ class CompaniesController extends ControllerBase
 		return $form;
 	}
 
-	public function indexAction()
+	public function oldindexAction()
 	{
 		$this->session->conditions = null;
 		$this->view->form = $this->getForm();
 	}
 
-	public function searchAction()
+	public function indexAction()
 	{
 		$numberPage = 1;
-		if ($this->request->isPost()) {
+		/*
+    if ($this->request->isPost()) {
 			$query = Criteria::fromInput($this->di, "Companies", $_POST);
 			$this->persistent->searchParams = $query->getParams();
 		} else {
-			$numberPage = $this->request->getQuery("page", "int");
-			if ($numberPage <= 0) {
-				$numberPage = 1;
 			}
 		}
+    */
+    $numberPage = $this->request->getQuery("page", "int");
+    if ($numberPage <= 0) {
+      $numberPage = 1;
+    }
+
+
 
 		$parameters = array();
 		if ($this->persistent->searchParams) {
@@ -81,10 +86,12 @@ class CompaniesController extends ControllerBase
 		}
 
 		$companies = Companies::find($parameters);
-		if (count($companies) == 0) {
+		/*
+    if (count($companies) == 0) {
 			$this->flash->notice("The search did not find any companies");
 			return $this->forward("companies/index");
 		}
+    */
 
 		$paginator = new Phalcon\Paginator\Adapter\Model(array(
 			"data" => $companies,

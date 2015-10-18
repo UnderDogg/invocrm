@@ -2,30 +2,46 @@
 
 <?php echo $this->getContent() ?>
 
-<div align="right">
-    <?php echo Tag::linkTo(array("producttypes/new", "Create Product types", "class" => "btn btn-primary")) ?>
-</div>
+<ul class="pager">
+    <li class="previous pull-left">
+        <?php echo Tag::linkTo("producttypes/index", "&larr; Go Back") ?>
+    </li>
+    <li class="pull-right">
+        <?php echo Tag::linkTo(array("producttypes/new", "Create product types", "class" => "btn btn-primary")) ?>
+    </li>
+</ul>
 
-<?php echo Tag::form(array("producttypes/search", "autocomplete" => "off")) ?>
-
-<div class="center scaffold">
-
-    <h2>Search product types</h2>
-
-    <div class="clearfix">
-        <label for="id">Id</label>
-        <?php echo Tag::textField(array("id", "size" => 10, "maxlength" => 10, "type" => "number")) ?>
-    </div>
-
-    <div class="clearfix">
-        <label for="name">Name</label>
-        <?php echo Tag::textField(array("name", "size" => 24, "maxlength" => 70)) ?>
-    </div>
-
-    <div class="clearfix">
-        <?php echo Tag::submitButton(array("Search", "class" => "btn btn-primary")) ?></td>
-    </div>
-
-</div>
-
-</form>
+<table class="table table-bordered table-striped table-hover" align="center">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php
+        if(isset($page->items)){
+            foreach($page->items as $productType){ ?>
+        <tr>
+            <td><?php echo $productType->id ?></td>
+            <td><?php echo $productType->name ?></td>
+            <td width="12%"><?php echo Tag::linkTo(array("producttypes/edit/".$productType->id, '<i class="icon-pencil"></i> Edit', "class" => "btn")) ?></td>
+            <td width="12%"><?php echo Tag::linkTo(array("producttypes/delete/".$productType->id, '<i class="icon-remove"></i> Delete', "class" => "btn")) ?></td>
+        </tr>
+    <?php }
+        } ?>
+    </tbody>
+    <tbody>
+        <tr>
+            <td colspan="4" align="right">
+                <div class="btn-group">
+                    <?php echo Tag::linkTo(array("producttypes/search", '<i class="icon-fast-backward"></i> First', "class" => "btn")) ?>
+                    <?php echo Tag::linkTo(array("producttypes/search?page=".$page->before, '<i class="icon-step-backward"></i> Previous', "class" => "btn ")) ?>
+                    <?php echo Tag::linkTo(array("producttypes/search?page=".$page->next, '<i class="icon-step-forward"></i> Next', "class" => "btn")) ?>
+                    <?php echo Tag::linkTo(array("producttypes/search?page=".$page->last, '<i class="icon-fast-forward"></i> Last', "class" => "btn")) ?>
+                    <span class="help-inline"><?php echo $page->current, "/", $page->total_pages ?></span>
+                </div>
+            </td>
+        </tr>
+    <tbody>
+</table>

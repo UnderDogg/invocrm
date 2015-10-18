@@ -14,7 +14,7 @@
         {{ stylesheet_link('AdminLTE/dist/css/ionicons.min.css') }}
         <!-- Theme style -->
         {{ stylesheet_link("adminlte/dist/css/AdminLTE.min.css") }}
-        {{ assets.outputCss() }}
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -304,7 +304,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="adminlte/pages/widgets.html">
+                            <a href="/adminlte/pages/widgets.html">
                                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li>
@@ -315,9 +315,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="adminlte/pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="adminlte/pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="adminlte/pages/charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                                <li><a href="/adminlte/pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                                <li><a href="/adminlte/pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
+                                <li><a href="/adminlte/pages/charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -327,11 +327,11 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="adminlte/pages/UI/general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
-                                <li><a href="adminlte/pages/UI/icons.html"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                                <li><a href="adminlte/pages/UI/buttons.html"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                                <li><a href="adminlte/pages/UI/sliders.html"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                                <li><a href="adminlte/pages/UI/timeline.html"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <li><a href="/adminlte/pages/UI/general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                <li><a href="/adminlte/pages/UI/icons.html"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                                <li><a href="/adminlte/pages/UI/buttons.html"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                                <li><a href="/adminlte/pages/UI/sliders.html"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                                <li><a href="/adminlte/pages/UI/timeline.html"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -340,9 +340,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="adminlte/pages/forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                                <li><a href="adminlte/pages/forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                                <li><a href="adminlte/pages/forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>                                
+                                <li><a href="/adminlte/pages/forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                                <li><a href="/adminlte/pages/forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                                <li><a href="/adminlte/pages/forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>                                
                             </ul>
                         </li>
                         <li class="treeview">
@@ -351,18 +351,18 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="adminlte/pages/tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li><a href="adminlte/pages/tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                                <li><a href="/adminlte/pages/tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                <li><a href="/adminlte/pages/tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="adminlte/pages/calendar.html">
+                            <a href="/adminlte/pages/calendar.html">
                                 <i class="fa fa-calendar"></i> <span>Calendar</span>
                                 <small class="badge pull-right bg-red">3</small>
                             </a>
                         </li>
                         <li>
-                            <a href="adminlte/pages/mailbox.html">
+                            <a href="/adminlte/pages/mailbox.html">
                                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
                                 <small class="badge pull-right bg-yellow">12</small>
                             </a>
@@ -373,13 +373,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="adminlte/pages/examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="adminlte/pages/examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="adminlte/pages/examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="adminlte/pages/examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="adminlte/pages/examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="adminlte/pages/examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>                                
-                                <li><a href="adminlte/pages/examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                                <li><a href="/adminlte/pages/examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                <li><a href="/adminlte/pages/examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="/adminlte/pages/examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                <li><a href="/adminlte/pages/examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                <li><a href="/adminlte/pages/examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                <li><a href="/adminlte/pages/examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>                                
+                                <li><a href="/adminlte/pages/examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -407,26 +407,16 @@
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
-{{ javascript_include("AdminLTE/plugins/jQuery/jQuery-2.1.4.min.js") }}
-{{ javascript_include("AdminLTE/bootstrap/js/bootstrap.min.js") }}
-{{ javascript_include("") }}
-
-
 {{ javascript_include('js/utils.js') }}
+
+
+
+
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <!-- AdminLTE App -->
 {{ javascript_include('adminlte/dist/js/app.js') }}
 
 
-
-
-
-
-
-
-{{ assets.outputJs() }}
-
-<!-- {{ FooterOutputJs }} -->
     </body>
 </html>

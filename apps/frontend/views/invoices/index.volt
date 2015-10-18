@@ -128,19 +128,19 @@
 </table>
 
 <!-- DATA TABLES -->
-{{ stylesheet_link('plugins/admin-lte/css/datatables/dataTables.bootstrap.css') }}
+{{ stylesheet_link('/adminlte/css/datatables/dataTables.bootstrap.css') }}
 <!-- DATA TABES SCRIPT -->
-{{ javascript_include('plugins/admin-lte/js/plugins/datatables/jquery.dataTables.js') }}
-{{ javascript_include('plugins/admin-lte/js/plugins/datatables/dataTables.bootstrap.js') }}
+{{ javascript_include('/adminlte/plugins/datatables/jquery.dataTables.js') }}
+{{ javascript_include('/adminlte/plugins/datatables/dataTables.bootstrap.js') }}
 <script type="text/javascript">
     $(function() {
         $('#grid-basic').dataTable({
-            "bPaginate": true,
-            "bLengthChange": true,
-            "bFilter": true,
-            "bSort": true,
-            "bInfo": true,
-            "bAutoWidth": true
+            "paging": true,
+            "lengthChange": false,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false
         });
     });
 </script>

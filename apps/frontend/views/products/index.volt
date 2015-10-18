@@ -2,45 +2,52 @@
 
 <?php echo $this->getContent() ?>
 
-<div align="right">
-    <?php echo Tag::linkTo(array("products/new", "Create Products", "class" => "btn btn-primary")) ?>
-</div>
+<ul class="pager">
+    <li class="previous pull-left">
+        <?php echo Tag::linkTo("products/index", "&larr; Go Back") ?>
+    </li>
+    <li class="pull-right">
+        <?php echo Tag::linkTo(array("products/new", "Create products", "class" => "btn btn-primary")) ?>
+    </li>
+</ul>
 
-<?php echo Tag::form(array("products/search", "autocomplete" => "off")) ?>
-
-<div class="center scaffold">
-
-    <h2>Search products</h2>
-
-    <div class="clearfix">
-        <label for="id">Id</label>
-        <?php echo Tag::textField(array("id", "size" => 10, "maxlength" => 10, "type" => "number")) ?>
-    </div>
-
-    <div class="clearfix">
-        <label for="product_types_id">Product Type</label>
-        <?php echo Tag::select(array("product_types_id", $productTypes, "using" => array("id", "name"), "useDummy" => true)) ?>
-    </div>
-
-    <div class="clearfix">
-        <label for="name">Name</label>
-        <?php echo Tag::textField(array("name", "size" => 24, "maxlength" => 70)) ?>
-    </div>
-
-    <div class="clearfix">
-        <label for="price">Price</label>
-        <?php echo Tag::textField(array("price", "size" => 24, "maxlength" => 70, "type" => "number")) ?>
-    </div>
-
-    <div class="clearfix">
-        <label for="active">Active</label>
-        <?php echo Tag::selectStatic(array("active", array('Y'=>'Y','N'=>'N',), "useDummy" => true)) ?>
-    </div>
-
-    <div class="clearfix">
-        <?php echo Tag::submitButton(array("Search", "class" => "btn btn-primary")) ?></td>
-    </div>
-
-</div>
-
-</form>
+<table class="table table-bordered table-striped table-hover" align="center">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Product Type</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Active</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php
+        if(isset($page->items)){
+            foreach($page->items as $products){ ?>
+        <tr>
+            <td><?php echo $products->id ?></td>
+            <td><?php echo $products->getProductTypes()->name ?></td>
+            <td><?php echo $products->name ?></td>
+            <td><?php echo (string) $products->price ?></td>
+            <td><?php echo $products->active ?></td>
+            <td width="12%"><?php echo Tag::linkTo(array("products/edit/".$products->id, '<i class="icon-pencil"></i> Edit', "class" => "btn")) ?></td>
+            <td width="12%"><?php echo Tag::linkTo(array("products/delete/".$products->id, '<i class="icon-remove"></i> Delete', "class" => "btn")) ?></td>
+        </tr>
+    <?php }
+        } ?>
+    </tbody>
+    <tbody>
+        <tr>
+            <td colspan="7" align="right">
+                <div class="btn-group">
+                    <?php echo Tag::linkTo(array("products/search", '<i class="icon-fast-backward"></i> First', "class" => "btn")) ?>
+                    <?php echo Tag::linkTo(array("products/search?page=".$page->before, '<i class="icon-step-backward"></i> Previous', "class" => "btn ")) ?>
+                    <?php echo Tag::linkTo(array("products/search?page=".$page->next, '<i class="icon-step-forward"></i> Next', "class" => "btn")) ?>
+                    <?php echo Tag::linkTo(array("products/search?page=".$page->last, '<i class="icon-fast-forward"></i> Last', "class" => "btn")) ?>
+                    <span class="help-inline"><?php echo $page->current, "/", $page->total_pages ?></span>
+                </div>
+            </td>
+        </tr>
+    <tbody>
+</table>
