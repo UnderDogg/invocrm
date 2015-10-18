@@ -1,6 +1,6 @@
 <?php
 
-namespace NewINVO\Frontend;
+namespace INVOCrm\Frontend;
 
 use Phalcon\Loader;
 use Phalcon\Mvc\View;
@@ -20,8 +20,8 @@ class Module implements ModuleDefinitionInterface
         $loader = new Loader();
 
         $loader->registerNamespaces(array(
-            'NewINVO\Frontend\Controllers' => __DIR__ . '/controllers/',
-            'NewINVO\Frontend\Models' => __DIR__ . '/models/',
+            'INVOCrm\Frontend\Controllers' => __DIR__ . '/controllers/',
+            'INVOCrm\Frontend\Models' => __DIR__ . '/models/',
         ));
 
         $loader->register();

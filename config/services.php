@@ -37,7 +37,7 @@ $di['router'] = function () {
  */
 $di['url'] = function () {
     $url = new UrlResolver();
-    $url->setBaseUri('/newINVO/');
+    $url->setBaseUri('/');
 
     return $url;
 };
@@ -57,6 +57,7 @@ $di->set('session', function(){
 $di->set('flash', function(){
     return new Phalcon\Flash\Direct(array(
         'error' => 'alert alert-error',
+        'warning' => 'alert alert-warning',
         'success' => 'alert alert-success',
         'notice' => 'alert alert-info',
     ));

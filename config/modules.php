@@ -5,11 +5,11 @@
  */
 $application->registerModules(array(
     'frontend' => array(
-        'className' => 'NewINVO\Frontend\Module',
+        'className' => 'INVOCrm\Frontend\Module',
         'path' => __DIR__ . '/../apps/frontend/Module.php'
     ),
     'backend' => array(
-        'className' => 'NewINVO\Backend\Module',
+        'className' => 'INVOCrm\Backend\Module',
         'path' => __DIR__ . '/../apps/backend/Module.php'
     )
 ));
